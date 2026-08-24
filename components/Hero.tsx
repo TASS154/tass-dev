@@ -1,51 +1,113 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { WhatsAppButton } from "./WhatsAppButton";
 
-export function Hero() {
+type HeroProps = {
+  previewImage?: string;
+  previewTitle?: string;
+  previewUrl?: string;
+};
+
+export function Hero({
+  previewImage = "/projects/akreis-prime.png",
+  previewTitle = "AK Reis Prime",
+  previewUrl = "/projetos",
+}: HeroProps) {
   return (
-    <section className="relative min-h-[88svh] overflow-hidden bg-metallic">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-70" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal to-transparent" />
+    <section className="relative min-h-[92svh] overflow-hidden bg-metallic">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-80" />
+      <div className="animate-aurora pointer-events-none absolute -top-24 right-[-10%] h-[55vh] w-[55vw] rounded-full bg-[radial-gradient(circle,rgba(27,159,255,0.28),transparent_65%)] blur-2xl" />
+      <div className="pointer-events-none absolute bottom-[-10%] left-[-8%] h-[40vh] w-[40vw] rounded-full bg-[radial-gradient(circle,rgba(123,92,255,0.18),transparent_65%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-charcoal to-transparent" />
 
-      <div className="relative mx-auto flex min-h-[88svh] max-w-6xl flex-col justify-center px-5 py-16 sm:px-8 sm:py-20">
-        <p className="animate-fade-up font-display text-xs font-medium tracking-[0.35em] text-electric-bright uppercase">
-          Soluções em tecnologia
-        </p>
+      <div className="relative mx-auto grid min-h-[92svh] max-w-6xl items-center gap-10 px-5 py-14 lg:grid-cols-[1.05fr_0.95fr] sm:px-8 sm:py-16">
+        <div>
+          <p className="animate-fade-up inline-flex items-center gap-2 border border-electric/30 bg-electric/10 px-3 py-1.5 font-display text-[0.68rem] font-medium tracking-[0.28em] text-electric-bright uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-electric-bright shadow-[0_0_10px_#5ec4ff]" />
+            Disponível para novos projetos
+          </p>
 
-        <div className="animate-fade-up-delay-1 mt-6">
-          <Logo size="lg" className="drop-shadow-[0_0_40px_rgba(27,159,255,0.35)]" />
+          <div className="animate-fade-up-delay-1 mt-7">
+            <Logo
+              size="lg"
+              className="drop-shadow-[0_0_48px_rgba(27,159,255,0.45)]"
+            />
+          </div>
+
+          <h1 className="animate-fade-up-delay-2 mt-7 max-w-xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ice sm:text-5xl lg:text-[3.35rem]">
+            Sistemas sob medida que{" "}
+            <span className="text-shimmer">vendem confiança</span>
+          </h1>
+
+          <p className="animate-fade-up-delay-2 mt-5 max-w-lg text-base leading-relaxed text-ice-muted sm:text-lg">
+            Do caos à clareza: produto no ar, acabamento premium e conversa
+            direta no WhatsApp — sem enrolação.
+          </p>
+
+          <div className="animate-fade-up-delay-3 mt-9 flex flex-wrap items-center gap-3">
+            <WhatsAppButton glow className="min-w-[160px]" />
+            <Link
+              href="/projetos"
+              className="inline-flex items-center justify-center rounded-md border border-white/25 bg-white/5 px-5 py-3 font-display text-sm font-semibold tracking-wide text-ice backdrop-blur-sm transition hover:border-electric/50 hover:bg-electric/10"
+            >
+              Ver projetos
+            </Link>
+          </div>
+
+          <ul className="animate-fade-up-delay-4 mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-sm text-ice-muted">
+            <li className="flex items-center gap-2">
+              <TrustDot />5 demos no ar
+            </li>
+            <li className="flex items-center gap-2">
+              <TrustDot />Resposta no WhatsApp
+            </li>
+            <li className="flex items-center gap-2">
+              <TrustDot />Sob medida, de verdade
+            </li>
+          </ul>
         </div>
 
-        <p className="animate-fade-up-delay-2 mt-6 max-w-xl font-display text-xl font-medium tracking-wide text-ice sm:text-2xl">
-          sistemas sob medida
-        </p>
-
-        <p className="animate-fade-up-delay-2 mt-4 max-w-lg text-base leading-relaxed text-ice-muted sm:text-lg">
-          Do caos à clareza: produtos digitais com precisão técnica e acabamento
-          premium — feitos para atrair, converter e escalar.
-        </p>
-
-        <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap items-center gap-4">
-          <WhatsAppButton glow />
+        <div className="animate-fade-in relative hidden lg:block">
+          <div className="animate-float absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle_at_30%_20%,rgba(27,159,255,0.22),transparent_55%)] blur-xl" />
           <Link
-            href="/projetos"
-            className="inline-flex items-center justify-center rounded-md border border-white/25 px-5 py-3 font-display text-sm font-semibold tracking-wide text-ice transition hover:border-electric/50 hover:bg-white/5"
+            href={previewUrl}
+            className="outline-frame group relative block overflow-hidden rounded-2xl bg-charcoal-elevated shadow-[0_30px_80px_rgba(0,0,0,0.55)] transition duration-500"
           >
-            Ver projetos
-          </Link>
-          <Link
-            href="/contato"
-            className="inline-flex items-center justify-center rounded-md border border-white/10 px-5 py-3 font-display text-sm font-semibold tracking-wide text-ice-muted transition hover:text-ice"
-          >
-            Pedir orçamento
+            <div className="relative aspect-[4/5] max-h-[70vh]">
+              <Image
+                src={previewImage}
+                alt={`Preview ${previewTitle}`}
+                fill
+                priority
+                quality={95}
+                className="object-cover object-top transition duration-700 group-hover:scale-[1.03]"
+                sizes="(max-width: 1024px) 0vw, 42vw"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <p className="font-display text-[0.65rem] tracking-[0.3em] text-electric-bright uppercase">
+                  Em destaque
+                </p>
+                <p className="mt-1 font-display text-xl font-semibold text-ice">
+                  {previewTitle}
+                </p>
+                <p className="mt-1 text-sm text-ice-muted">Demo ao vivo · ver case →</p>
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/20" />
           </Link>
         </div>
-
-        <p className="animate-fade-up-delay-3 mt-14 font-display text-[0.7rem] tracking-[0.28em] text-ice-muted uppercase">
-          Tecnologia · Precisão · Resultado
-        </p>
       </div>
     </section>
+  );
+}
+
+function TrustDot() {
+  return (
+    <span
+      className="inline-block h-1.5 w-1.5 rounded-full bg-electric shadow-[0_0_8px_rgba(27,159,255,0.8)]"
+      aria-hidden
+    />
   );
 }

@@ -12,14 +12,16 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <SiteShell>
-      <section className="bg-metallic">
-        <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="relative overflow-hidden bg-metallic">
+        <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="font-display text-xs font-medium tracking-[0.3em] text-electric-bright uppercase">
-              Contato
+            <p className="inline-flex items-center gap-2 border border-electric/30 bg-electric/10 px-3 py-1.5 font-display text-[0.68rem] font-medium tracking-[0.28em] text-electric-bright uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-electric-bright" />
+              Resposta rápida
             </p>
-            <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ice sm:text-5xl">
-              Vamos conversar
+            <h1 className="mt-5 font-display text-4xl font-semibold tracking-tight text-ice sm:text-5xl">
+              Vamos conversar com certeza
             </h1>
             <p className="mt-4 max-w-md text-ice-muted">
               Preencha o formulário e envie direto no WhatsApp. Sem intermediário —
@@ -36,7 +38,7 @@ export default function ContatoPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-electric-bright">03</span>
-                Resposta rápida pelo WhatsApp
+                Conversa direta — você fala com quem constrói
               </li>
             </ul>
             <div className="mt-8">

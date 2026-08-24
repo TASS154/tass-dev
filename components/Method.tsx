@@ -1,54 +1,46 @@
 const STEPS = [
   {
-    title: "Problema / Caos",
-    text: "Mapeamos a dor real do negócio — sem ruído, sem solução genérica.",
+    title: "Problema",
+    text: "Entendemos a dor real do negócio — sem template genérico.",
   },
   {
-    title: "Processo / Estrutura",
-    text: "Organizamos complexidade em arquitetura clara, fluxos e prioridades.",
+    title: "Estrutura",
+    text: "Organizamos complexidade em fluxos claros e prioridades.",
   },
   {
-    title: "Solução / Clareza",
-    text: "Entregamos o sistema no ar, com acabamento premium e foco em resultado.",
+    title: "Clareza",
+    text: "Entregamos no ar: visual premium e foco em resultado.",
   },
 ];
 
 export function Method() {
   return (
-    <section
-      id="como-entrego"
-      className="scroll-mt-20 border-t border-white/10 bg-charcoal-elevated"
-    >
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+    <section className="relative overflow-hidden border-t border-white/10 bg-charcoal-elevated">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
+      <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <p className="font-display text-xs font-medium tracking-[0.3em] text-electric-bright uppercase">
           Método
         </p>
-        <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ice sm:text-4xl">
-          Do problema à solução
+        <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-ice sm:text-5xl">
+          Do problema à solução — com certeza no caminho
         </h2>
-        <p className="mt-3 max-w-xl text-ice-muted">
+        <p className="mt-4 max-w-xl text-ice-muted">
           Complexidade não assusta. Ela é organizada.
         </p>
 
-        <ol className="mt-12 grid gap-6 md:grid-cols-3">
+        <ol className="mt-14 grid gap-4 md:grid-cols-3 md:gap-0">
           {STEPS.map((step, index) => (
             <li
               key={step.title}
-              className="relative border border-white/10 bg-charcoal/60 p-6 transition duration-300 hover:border-electric/40"
+              className="relative border border-white/10 bg-charcoal/50 p-7 transition duration-300 hover:border-electric/45 hover:bg-charcoal/80 md:border-l-0 md:first:border-l"
             >
-              <span className="font-display text-xs tracking-[0.25em] text-violet-accent">
+              <span className="font-display text-4xl font-semibold text-electric/25">
                 0{index + 1}
               </span>
-              <h3 className="mt-4 font-display text-lg font-semibold text-ice">
+              <h3 className="mt-4 font-display text-xl font-semibold text-ice">
                 {step.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ice-muted">{step.text}</p>
-              {index < STEPS.length - 1 ? (
-                <div
-                  className="pointer-events-none absolute top-1/2 -right-3 hidden h-px w-6 bg-gradient-to-r from-electric/50 to-transparent md:block"
-                  aria-hidden
-                />
-              ) : null}
             </li>
           ))}
         </ol>

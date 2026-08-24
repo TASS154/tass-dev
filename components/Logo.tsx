@@ -7,9 +7,9 @@ type LogoProps = {
 };
 
 const sizeClass = {
-  sm: "h-11 w-auto",
-  md: "h-16 w-auto",
-  lg: "h-24 w-auto sm:h-28",
+  sm: "h-12 w-auto",
+  md: "h-[4.5rem] w-auto",
+  lg: "h-28 w-auto sm:h-32",
 };
 
 export function Logo({ className = "", size = "sm" }: LogoProps) {
