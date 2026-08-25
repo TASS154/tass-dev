@@ -20,6 +20,7 @@ export default async function Home() {
       <Hero
         previewImage={featured.image}
         previewTitle={featured.title}
+        previewBlurb={featured.blurb}
         previewUrl="/projetos"
       />
       <TrustStrip />
@@ -27,7 +28,7 @@ export default async function Home() {
       <ProjectGrid
         projects={grid}
         title="Mais provas no ar"
-        subtitle="Não é mock — são demos reais. Abra, clique, sinta o nível."
+        subtitle="Não é mock — são demos reais. Abra, clique e veja o nível."
       />
       <div className="border-t border-white/10 bg-charcoal px-5 py-10 text-center sm:px-8">
         <Link

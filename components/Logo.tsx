@@ -12,6 +12,12 @@ const frameClass = {
   lg: "h-36 w-36 sm:h-44 sm:w-44",
 };
 
+const padClass = {
+  sm: "p-1.5",
+  md: "p-2",
+  lg: "p-3 sm:p-3.5",
+};
+
 export function Logo({ className = "", size = "sm" }: LogoProps) {
   return (
     <Link
@@ -20,14 +26,14 @@ export function Logo({ className = "", size = "sm" }: LogoProps) {
       aria-label="TASS Dev"
     >
       <span
-        className={`${frameClass[size]} relative block overflow-hidden rounded-full border border-white/25 bg-white shadow-[0_0_24px_rgba(27,159,255,0.25)] transition duration-300 group-hover:border-electric/45 group-hover:shadow-[0_0_32px_rgba(27,159,255,0.4)]`}
+        className={`${frameClass[size]} ${padClass[size]} relative block overflow-hidden rounded-full border border-white/25 bg-white shadow-[0_0_24px_rgba(27,159,255,0.25)] transition duration-300 group-hover:border-electric/45 group-hover:shadow-[0_0_32px_rgba(27,159,255,0.4)]`}
       >
         <Image
           src="/logo-tass-dev.png"
           alt="TASS Dev"
           width={512}
           height={512}
-          className="h-full w-full scale-110 object-cover transition duration-300 group-hover:scale-[1.14]"
+          className="h-full w-full scale-[1.65] object-contain transition duration-300 group-hover:scale-[1.7] group-hover:brightness-105"
           priority
         />
       </span>

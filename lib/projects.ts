@@ -8,6 +8,9 @@ export type Project = {
   githubUrl?: string;
   image: string;
   featured?: boolean;
+  /** CSS object-position for screenshots that need framing */
+  imagePosition?: string;
+  imageFit?: "cover" | "contain";
 };
 
 /** Curated allowlist — copy and order are always manual (approach A for sales). */
@@ -17,68 +20,75 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "atendia",
     title: "Atendia",
     blurb:
-      "Hub comercial para PMEs no WhatsApp: lead → cliente → orçamento → agenda → pagamento → pós-venda. Demo com tenant Studio Bella.",
-    tags: ["WhatsApp", "CRM", "Operação"],
+      "Organize no WhatsApp o que hoje fica espalhado: novos clientes, orçamentos, agenda, cobrança e acompanhamento depois da venda — tudo em um só lugar, fácil de usar no dia a dia.",
+    tags: ["WhatsApp", "Vendas", "Atendimento"],
     demoUrl: "https://atendia-kappa.vercel.app",
     githubUrl: "https://github.com/TASS154/atendia",
     image: "/projects/atendia.png",
     featured: true,
+    imageFit: "cover",
+    imagePosition: "left top",
   },
   {
     id: "akreis-prime",
     vercelProjectName: "akreis-prime",
     title: "AK Reis Prime",
     blurb:
-      "E-commerce premium de luxo (relógios, couro, fragrâncias) com Auth, Firestore, Mercado Pago e checkout completo.",
-    tags: ["E-commerce", "Luxo", "Pagamentos"],
+      "Loja online de alto padrão para relógios, couro e fragrâncias — com catálogo elegante, conta do cliente e pagamento seguro, pronta para vender com cara de marca premium.",
+    tags: ["Loja online", "Luxo", "Pagamentos"],
     demoUrl: "https://akreis-prime.vercel.app",
     githubUrl: "https://github.com/TASS154/AK",
     image: "/projects/akreis-prime.png",
     featured: true,
+    imagePosition: "top",
   },
   {
     id: "palicone",
     vercelProjectName: "palicone-demo",
     title: "Palicone",
     blurb:
-      "Demo completa de steak house: cardápio digital, operação interna e painel admin — do pedido ao backoffice.",
-    tags: ["Restaurante", "Cardápio", "Admin"],
+      "Para restaurante que quer modernizar: cardápio digital para o cliente, tela para a equipe e painel para a gestão — do pedido ao controle interno.",
+    tags: ["Restaurante", "Cardápio", "Gestão"],
     demoUrl: "https://palicone-demo.vercel.app",
     githubUrl: "https://github.com/TASS154/palicone-demo",
     image: "/projects/palicone.png",
+    imagePosition: "top",
   },
   {
     id: "veloz",
     vercelProjectName: "veloz",
     title: "Veloz",
     blurb:
-      "Marketplace de copos e acrílicos personalizados: catálogo, carrinho, conta e pedido via WhatsApp + painel admin.",
-    tags: ["E-commerce", "Firebase", "WhatsApp"],
+      "Loja de copos e taças personalizadas: o cliente vê o catálogo, monta o pedido e finaliza pelo WhatsApp — simples para quem compra e prático para quem vende.",
+    tags: ["Loja online", "Catálogo", "Pedidos"],
     demoUrl: "https://temp-v4fe.vercel.app",
     githubUrl: "https://github.com/TASS154/temp",
     image: "/projects/veloz.png",
+    imagePosition: "top",
   },
   {
     id: "finance-ai",
     vercelProjectName: "finance-ai",
     title: "Finance AI",
     blurb:
-      "Numera: painel financeiro com matemática determinística + insights Gemini, quiz de educação e UI multilíngue.",
-    tags: ["AI", "Finanças", "Dashboard"],
+      "Painel para enxergar para onde vai o dinheiro: receitas, despesas e um resumo claro do que importa — com sugestões práticas para organizar as finanças.",
+    tags: ["Finanças", "Organização", "Insights"],
     demoUrl: "https://finance-ai-dun-iota.vercel.app",
     githubUrl: "https://github.com/TASS154/finance-ai",
     image: "/projects/finance-ai.png",
+    imagePosition: "top",
   },
   {
     id: "bot-advisor",
     vercelProjectName: "bot-advisor",
     title: "Bot Advisor",
     blurb:
-      "Analista quantitativo com IA: perfil do investidor + dados de mercado em tempo real e carteira 3–5 ativos via Gemini.",
-    tags: ["Bot", "AI", "Investimentos"],
+      "Ajuda a montar uma carteira de investimentos com base no seu perfil e no cenário do mercado — em linguagem clara, sem complicar o que não precisa.",
+    tags: ["Investimentos", "Orientação", "Mercado"],
     demoUrl: "https://bot-advisor.vercel.app",
     githubUrl: "https://github.com/TASS154/BOT-ADVISOR",
     image: "/projects/bot-advisor.png",
+    imagePosition: "top",
   },
 ];
 

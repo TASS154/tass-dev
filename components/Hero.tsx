@@ -7,12 +7,14 @@ type HeroProps = {
   previewImage?: string;
   previewTitle?: string;
   previewUrl?: string;
+  previewBlurb?: string;
 };
 
 export function Hero({
   previewImage = "/projects/atendia.png",
   previewTitle = "Atendia",
   previewUrl = "/projetos",
+  previewBlurb = "Organize vendas e atendimento no WhatsApp em um só lugar.",
 }: HeroProps) {
   return (
     <section className="relative min-h-[92svh] overflow-hidden bg-metallic">
@@ -74,26 +76,30 @@ export function Hero({
             href={previewUrl}
             className="outline-frame group relative block overflow-hidden rounded-2xl bg-charcoal-elevated shadow-[0_30px_80px_rgba(0,0,0,0.55)] transition duration-500"
           >
-            <div className="relative aspect-[4/5] max-h-[70vh]">
+            <div className="relative aspect-[16/11] overflow-hidden bg-graphite">
               <Image
                 src={previewImage}
                 alt={`Preview ${previewTitle}`}
                 fill
                 priority
                 quality={95}
-                className="object-cover object-top transition duration-700 group-hover:scale-[1.03]"
+                className="origin-top-left object-cover object-left-top scale-[1.45] transition duration-700 group-hover:scale-[1.47]"
                 sizes="(max-width: 1024px) 0vw, 42vw"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <p className="font-display text-[0.65rem] tracking-[0.3em] text-electric-bright uppercase">
-                  Em destaque
-                </p>
-                <p className="mt-1 font-display text-xl font-semibold text-ice">
-                  {previewTitle}
-                </p>
-                <p className="mt-1 text-sm text-ice-muted">Demo ao vivo · ver case →</p>
-              </div>
+            </div>
+            <div className="border-t border-white/10 bg-charcoal/95 px-6 py-5">
+              <p className="font-display text-[0.65rem] tracking-[0.3em] text-electric-bright uppercase">
+                Em destaque
+              </p>
+              <p className="mt-1 font-display text-xl font-semibold text-ice">
+                {previewTitle}
+              </p>
+              <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-ice-muted">
+                {previewBlurb}
+              </p>
+              <p className="mt-3 text-sm font-semibold text-electric-bright">
+                Demo ao vivo · ver case →
+              </p>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/20" />
           </Link>
