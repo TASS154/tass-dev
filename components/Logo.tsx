@@ -27,7 +27,7 @@ export function Logo({ className = "", size = "sm" }: LogoProps) {
         className={`${frameClass[size]} relative block overflow-hidden rounded-full border border-white/25 bg-white shadow-[0_0_24px_rgba(27,159,255,0.25)] transition duration-300 group-hover:border-electric/45 group-hover:shadow-[0_0_32px_rgba(27,159,255,0.4)]`}
       >
         <Image
-          src="/logo-mark.png"
+          src="/logo-mark-v2.png"
           alt="TASS Dev"
           width={512}
           height={512}
