@@ -11,7 +11,7 @@ type HeroProps = {
 };
 
 export function Hero({
-  previewImage = "/projects/atendia.png",
+  previewImage = "/projects/atendia-v2.png",
   previewTitle = "Atendia",
   previewUrl = "/projetos",
   previewBlurb = "Organize vendas e atendimento no WhatsApp em um só lugar.",

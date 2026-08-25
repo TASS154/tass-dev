@@ -24,7 +24,7 @@ export const PROJECTS_CONFIG: Project[] = [
     tags: ["WhatsApp", "Vendas", "Atendimento"],
     demoUrl: "https://atendia-kappa.vercel.app",
     githubUrl: "https://github.com/TASS154/atendia",
-    image: "/projects/atendia.png",
+    image: "/projects/atendia-v2.png",
     featured: true,
     imageFit: "cover",
     imagePosition: "left top",
