@@ -17,21 +17,23 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "TASS Dev — sistemas sob medida",
   description:
-    "TASS Dev cria sistemas sob medida com acabamento premium. Veja demos ao vivo e fale no WhatsApp.",
+    "TASS Dev cria sistemas sob medida com acabamento premium. Orçamento em até 24h. Demos ao vivo e contato direto no WhatsApp.",
   keywords: [
     "TASS Dev",
     "sistemas sob medida",
     "desenvolvimento web",
     "portfólio",
+    "orçamento",
     "Next.js",
   ],
   icons: {
-    icon: "/logo-tass-dev.png",
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
   },
   openGraph: {
     title: "TASS Dev — sistemas sob medida",
     description:
-      "Produtos digitais com precisão técnica e acabamento premium. Contate-me no WhatsApp.",
+      "Produtos digitais premium. Orçamento em até 24h — fale no WhatsApp.",
     locale: "pt_BR",
     type: "website",
   },

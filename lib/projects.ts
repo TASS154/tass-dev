@@ -17,7 +17,7 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "atendia",
     title: "Atendia",
     blurb:
-      "Hub comercial no WhatsApp: lead, cliente, orçamento, agenda, cobrança e pós-venda em um só lugar.",
+      "Hub comercial para PMEs no WhatsApp: lead → cliente → orçamento → agenda → pagamento → pós-venda. Demo com tenant Studio Bella.",
     tags: ["WhatsApp", "CRM", "Operação"],
     demoUrl: "https://atendia-kappa.vercel.app",
     githubUrl: "https://github.com/TASS154/atendia",
@@ -29,9 +29,10 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "akreis-prime",
     title: "AK Reis Prime",
     blurb:
-      "E-commerce de luxo: relógios, couro e fragrâncias com curadoria premium e conversão no centro.",
-    tags: ["E-commerce", "Luxo", "UI premium"],
+      "E-commerce premium de luxo (relógios, couro, fragrâncias) com Auth, Firestore, Mercado Pago e checkout completo.",
+    tags: ["E-commerce", "Luxo", "Pagamentos"],
     demoUrl: "https://akreis-prime.vercel.app",
+    githubUrl: "https://github.com/TASS154/AK",
     image: "/projects/akreis-prime.png",
     featured: true,
   },
@@ -40,9 +41,10 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "palicone-demo",
     title: "Palicone",
     blurb:
-      "Steak house digital — cardápio, sistema interno e painel admin em uma demo completa.",
+      "Demo completa de steak house: cardápio digital, operação interna e painel admin — do pedido ao backoffice.",
     tags: ["Restaurante", "Cardápio", "Admin"],
     demoUrl: "https://palicone-demo.vercel.app",
+    githubUrl: "https://github.com/TASS154/palicone-demo",
     image: "/projects/palicone.png",
   },
   {
@@ -50,8 +52,8 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "veloz",
     title: "Veloz",
     blurb:
-      "Loja de acrílicos e taças personalizadas, com catálogo, carrinho e experiência de compra rápida.",
-    tags: ["E-commerce", "Catálogo"],
+      "Marketplace de copos e acrílicos personalizados: catálogo, carrinho, conta e pedido via WhatsApp + painel admin.",
+    tags: ["E-commerce", "Firebase", "WhatsApp"],
     demoUrl: "https://temp-v4fe.vercel.app",
     githubUrl: "https://github.com/TASS154/temp",
     image: "/projects/veloz.png",
@@ -61,7 +63,7 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "finance-ai",
     title: "Finance AI",
     blurb:
-      "Painel financeiro com métricas, categorias e insights gerados por IA — Numera em ação.",
+      "Numera: painel financeiro com matemática determinística + insights Gemini, quiz de educação e UI multilíngue.",
     tags: ["AI", "Finanças", "Dashboard"],
     demoUrl: "https://finance-ai-dun-iota.vercel.app",
     githubUrl: "https://github.com/TASS154/finance-ai",
@@ -72,9 +74,10 @@ export const PROJECTS_CONFIG: Project[] = [
     vercelProjectName: "bot-advisor",
     title: "Bot Advisor",
     blurb:
-      "Analista financeiro quantitativo com IA: indicadores, cenário e carteira em tempo real.",
+      "Analista quantitativo com IA: perfil do investidor + dados de mercado em tempo real e carteira 3–5 ativos via Gemini.",
     tags: ["Bot", "AI", "Investimentos"],
     demoUrl: "https://bot-advisor.vercel.app",
+    githubUrl: "https://github.com/TASS154/BOT-ADVISOR",
     image: "/projects/bot-advisor.png",
   },
 ];

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { NavLogo } from "./NavLogo";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 const links = [
@@ -12,7 +12,7 @@ export function Navbar() {
   return (
     <header className="relative z-40 border-b border-white/10 bg-charcoal">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8 sm:py-4">
-        <Logo size="sm" />
+        <NavLogo />
         <nav className="flex items-center gap-1 sm:gap-3">
           {links.map((link) => (
             <Link

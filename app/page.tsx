@@ -49,7 +49,7 @@ export default async function Home() {
               Vamos transformar sua ideia em sistema
             </h2>
             <p className="mt-3 text-ice-muted">
-              Me conta o objetivo. Em minutos você já tem conversa aberta no WhatsApp.
+              Me conta o objetivo. Orçamento em até 24h — conversa direta no WhatsApp.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

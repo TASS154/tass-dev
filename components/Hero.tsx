@@ -25,7 +25,7 @@ export function Hero({
         <div>
           <p className="animate-fade-up inline-flex items-center gap-2 border border-electric/30 bg-electric/10 px-3 py-1.5 font-display text-[0.68rem] font-medium tracking-[0.28em] text-electric-bright uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-electric-bright shadow-[0_0_10px_#5ec4ff]" />
-            Disponível para novos projetos
+            Orçamento em até 24h
           </p>
 
           <div className="animate-fade-up-delay-1 mt-7">
@@ -42,7 +42,7 @@ export function Hero({
 
           <p className="animate-fade-up-delay-2 mt-5 max-w-lg text-base leading-relaxed text-ice-muted sm:text-lg">
             Do caos à clareza: produto no ar, acabamento premium e conversa
-            direta no WhatsApp — sem enrolação.
+            direta no WhatsApp. Peça orçamento — retorno em até 24h.
           </p>
 
           <div className="animate-fade-up-delay-3 mt-9 flex flex-wrap items-center gap-3">
@@ -60,7 +60,7 @@ export function Hero({
               <TrustDot />6 demos no ar
             </li>
             <li className="flex items-center gap-2">
-              <TrustDot />Resposta no WhatsApp
+              <TrustDot />Orçamento em 24h
             </li>
             <li className="flex items-center gap-2">
               <TrustDot />Sob medida, de verdade

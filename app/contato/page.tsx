@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Contato — TASS Dev",
   description:
-    "Fale com a TASS Dev pelo WhatsApp. Formulário rápido para orçamento de sistemas sob medida.",
+    "Fale com a TASS Dev pelo WhatsApp. Orçamento de sistemas sob medida em até 24h.",
 };
 
 export default function ContatoPage() {
@@ -18,14 +18,14 @@ export default function ContatoPage() {
           <div>
             <p className="inline-flex items-center gap-2 border border-electric/30 bg-electric/10 px-3 py-1.5 font-display text-[0.68rem] font-medium tracking-[0.28em] text-electric-bright uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-electric-bright" />
-              Resposta rápida
+              Orçamento em até 24h
             </p>
             <h1 className="mt-5 font-display text-4xl font-semibold tracking-tight text-ice sm:text-5xl">
               Vamos conversar com certeza
             </h1>
             <p className="mt-4 max-w-md text-ice-muted">
-              Preencha o formulário e envie direto no WhatsApp. Sem intermediário —
-              alinhamos objetivo, prazo e próximo passo.
+              Preencha o formulário e envie direto no WhatsApp. Retorno de
+              orçamento em até 24h — sem intermediário.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ice-muted">
               <li className="flex gap-3">

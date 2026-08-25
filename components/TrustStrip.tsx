@@ -1,6 +1,6 @@
 const PROOFS = [
   { label: "Demos no ar", value: "06" },
-  { label: "Foco", value: "Resultado" },
+  { label: "Orçamento", value: "24h" },
   { label: "Contato", value: "WhatsApp" },
   { label: "Modelo", value: "Sob medida" },
 ];
