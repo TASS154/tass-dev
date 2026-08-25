@@ -10,8 +10,8 @@ type HeroProps = {
 };
 
 export function Hero({
-  previewImage = "/projects/akreis-prime.png",
-  previewTitle = "AK Reis Prime",
+  previewImage = "/projects/atendia.png",
+  previewTitle = "Atendia",
   previewUrl = "/projetos",
 }: HeroProps) {
   return (
@@ -57,7 +57,7 @@ export function Hero({
 
           <ul className="animate-fade-up-delay-4 mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-sm text-ice-muted">
             <li className="flex items-center gap-2">
-              <TrustDot />5 demos no ar
+              <TrustDot />6 demos no ar
             </li>
             <li className="flex items-center gap-2">
               <TrustDot />Resposta no WhatsApp

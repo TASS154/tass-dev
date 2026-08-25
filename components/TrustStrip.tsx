@@ -1,5 +1,5 @@
 const PROOFS = [
-  { label: "Demos no ar", value: "05" },
+  { label: "Demos no ar", value: "06" },
   { label: "Foco", value: "Resultado" },
   { label: "Contato", value: "WhatsApp" },
   { label: "Modelo", value: "Sob medida" },

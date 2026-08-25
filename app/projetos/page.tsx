@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { FeaturedProject } from "@/components/FeaturedProject";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { SiteShell } from "@/components/SiteShell";
-import { getFeaturedProject, getGridProjects } from "@/lib/projects";
+import { getFeaturedProjects, getGridProjects } from "@/lib/projects";
 import { getProjects } from "@/lib/vercel";
 
 export const metadata: Metadata = {
   title: "Projetos — TASS Dev",
   description:
-    "Demos ao vivo da TASS Dev: AK Reis Prime, Palicone, Veloz, Finance AI e Bot Advisor.",
+    "Demos ao vivo da TASS Dev: Atendia, AK Reis Prime, Palicone, Veloz, Finance AI e Bot Advisor.",
 };
 
 export default async function ProjetosPage() {
   const projects = await getProjects();
-  const featured = getFeaturedProject(projects);
+  const highlights = getFeaturedProjects(projects);
   const grid = getGridProjects(projects);
 
   return (
@@ -32,7 +32,7 @@ export default async function ProjetosPage() {
           </p>
         </div>
       </section>
-      <FeaturedProject project={featured} />
+      <FeaturedProject projects={highlights} />
       <ProjectGrid
         projects={grid}
         title="Demais cases"

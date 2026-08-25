@@ -13,6 +13,18 @@ export type Project = {
 /** Curated allowlist — copy and order are always manual (approach A for sales). */
 export const PROJECTS_CONFIG: Project[] = [
   {
+    id: "atendia",
+    vercelProjectName: "atendia",
+    title: "Atendia",
+    blurb:
+      "Hub comercial no WhatsApp: lead, cliente, orçamento, agenda, cobrança e pós-venda em um só lugar.",
+    tags: ["WhatsApp", "CRM", "Operação"],
+    demoUrl: "https://atendia-kappa.vercel.app",
+    githubUrl: "https://github.com/TASS154/atendia",
+    image: "/projects/atendia.png",
+    featured: true,
+  },
+  {
     id: "akreis-prime",
     vercelProjectName: "akreis-prime",
     title: "AK Reis Prime",
@@ -67,8 +79,13 @@ export const PROJECTS_CONFIG: Project[] = [
   },
 ];
 
+export function getFeaturedProjects(projects: Project[]): Project[] {
+  const featured = projects.filter((p) => p.featured);
+  return featured.length ? featured : projects.slice(0, 1);
+}
+
 export function getFeaturedProject(projects: Project[]): Project {
-  return projects.find((p) => p.featured) ?? projects[0];
+  return getFeaturedProjects(projects)[0];
 }
 
 export function getGridProjects(projects: Project[]): Project[] {

@@ -6,12 +6,13 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 import { SiteShell } from "@/components/SiteShell";
 import { TrustStrip } from "@/components/TrustStrip";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { getFeaturedProject, getGridProjects } from "@/lib/projects";
+import { getFeaturedProject, getFeaturedProjects, getGridProjects } from "@/lib/projects";
 import { getProjects } from "@/lib/vercel";
 
 export default async function Home() {
   const projects = await getProjects();
   const featured = getFeaturedProject(projects);
+  const highlights = getFeaturedProjects(projects);
   const grid = getGridProjects(projects).slice(0, 2);
 
   return (
@@ -22,7 +23,7 @@ export default async function Home() {
         previewUrl="/projetos"
       />
       <TrustStrip />
-      <FeaturedProject project={featured} />
+      <FeaturedProject projects={highlights} />
       <ProjectGrid
         projects={grid}
         title="Mais provas no ar"
